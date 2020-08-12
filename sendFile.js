@@ -8,7 +8,7 @@ const comicLink = document.getElementById('comic');
 const comiciLink = document.getElementById('comici');
 const comicbLink = document.getElementById('comicb'); */
 
-const PETlink = 'https://kohwahskee.github.io/emoteEditor/assets/PETTHEEMOTE.psd';
+const PETlink = 'https://alcadesign.github.io/emoteEditor/assets/PETTHEEMOTE.psd';
 const hazmatLink = 'https://kohwahskee.github.io/emoteEditor/assets/pepeHazmat.psd'
 const signLink = 'https://kohwahskee.github.io/emoteEditor/assets/PeepoSign.psd'
 const signALink = 'https://kohwahskee.github.io/emoteEditor/assets/peepoSignAnimated.psd';
