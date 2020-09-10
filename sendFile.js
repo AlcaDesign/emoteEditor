@@ -339,8 +339,17 @@ function petEmote(e) {
     wnd.postMessage(loadImage, "*");
   }
   if (cnt == 4) {
-    var emoteName = urlParams.get('name');
-    var openSmart = `var emotePlace = app.activeDocument.layers.getByName('[Emote Here]');app.activeDocument.activeLayer = emotePlace;executeAction(stringIDToTypeID("placedLayerEditContents"));var emoteID = '${emoteName}';app.open('https://cdn.discordapp.com/emojis/' + emoteID);app.activeDocument = app.documents.getByName('${emoteName}.psd');`
+    // var emoteName = urlParams.get('name');
+    var imageURL = urlParams.get('url');
+    var openSmart = `
+      var emotePlace = app.activeDocument.layers.getByName('[Emote Here]');
+      app.activeDocument.activeLayer = emotePlace;
+      executeAction(stringIDToTypeID("placedLayerEditContents"));
+      // var emoteID = '${emoteName}';
+      // app.open('https://cdn.discordapp.com/emojis/' + emoteID);
+      app.open(imageURL);
+      app.activeDocument = app.documents.getByName('${emoteName}.psd');
+    `
     wnd.postMessage(openSmart, "*");
     console.log('printed');
     var emoteName = urlParams.get('name');
