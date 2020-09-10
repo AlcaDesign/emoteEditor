@@ -347,7 +347,7 @@ function petEmote(e) {
       executeAction(stringIDToTypeID("placedLayerEditContents"));
       // var emoteID = '${emoteName}';
       // app.open('https://cdn.discordapp.com/emojis/' + emoteID);
-      app.open(imageURL);
+      app.open(${imageURL});
       app.activeDocument = app.documents.getByName('${emoteName}.psd');
     `
     wnd.postMessage(openSmart, "*");
